@@ -1,18 +1,14 @@
-import React from 'react';
+import React,  { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Button from './components/button.jsx';
+// import Checkbox from './components/checkbox.jsx';
+// import InputField from './components/input_field.jsx';
 
 import '../assets/stylesheets/application.scss';
 
-const Hello = ({ name }) => {
-  return (
-    <div>
-      Hello,
-      {name}
-    </div>
-  );
-};
-
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+  ReactDOM.render(
+    <Button />,
+    root);
 }

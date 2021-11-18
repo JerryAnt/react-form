@@ -8,3 +8,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.left-scene {
+  background-color: yellow;
+}
+
+.right-scene {
+  flex: 0 0 40%;
+  background-color: red;
+  overflow: scroll;
+}
+
+.checkbox{
+background-color: black;
+}
