@@ -1,9 +1,11 @@
 import React,  { Component } from 'react';
 
-class Checkbox render Component {
-  render(){
-    return(
-      input className="checkbox")
+class Checkbox extends Component {
+  render() {
+  return(
+
+    <div className="checkbox">This is my checkbox</div>
+    );
   }
 }
 
