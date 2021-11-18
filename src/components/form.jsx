@@ -7,9 +7,14 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <InputField />
+        <InputField id="name" />
+        <InputField id="company" />
+        <InputField id="email" />
         <Checkbox />
-        <Button />
+        <div class="container">
+          <Button id="submit" />
+          <Button id="reset" />
+        </div>
       </div>
     );
   }
