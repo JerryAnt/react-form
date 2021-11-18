@@ -1,9 +1,11 @@
 import React,  { Component } from 'react';
 
 
-class InputField extends React.Component {
+class InputField extends Component {
   render() {
-    return <div className="input-field">this is my {this.props.id}</div>
+    return (
+      <input type="text" className="input-field" placeholder={this.props.id} />
+    )
   }
 }
 export default InputField;
