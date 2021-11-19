@@ -4,12 +4,28 @@ import Checkbox from './checkbox.jsx';
 import InputField from './input_field.jsx';
 
 class Form extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      // where is should put my events
+    };
+  }
+
+handleSubmit() {
+  // where I should change the state
+  // handleSubmit for the submit button
+}
+
+
+
   render() {
     return (
-      <div>
+      <form>
         <div>
           <p>name*</p>
-          <InputField  id="name" />
+          <InputField
+          id="name"
+          />
         </div>
         <div>
           <p>company*</p>
@@ -21,10 +37,17 @@ class Form extends Component {
         </div>
         <Checkbox />
         <div class="container">
-          <Button type="submit" id="submit" />
-          <Button id="reset" />
+          <Button type="submit"
+          id="submit"
+
+        // create a function handleSubmit
+          onClick="handleSubmit"/>
+          <Button id="reset"
+
+        // create a function handleclear
+          onclick="handleclear"/>
         </div>
-      </div>
+      </form>
     );
   }
 }
