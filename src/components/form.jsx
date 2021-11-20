@@ -115,19 +115,19 @@ render() {
           <form onSubmit={this.handleSubmit} noValidate>
             <div className='fullName'>
               <label htmlFor="fullName">Full Name</label>
-              <input type='text' name='fullName' onChange={this.handleChange} noValidate />
+              <InputField id="name" type='text' name='fullName' onChange={this.handleChange} noValidate />
               {errors.fullName.length > 0 &&
                 <span className='error'>{errors.fullName}</span>}
             </div>
             <div className='companyName'>
               <label htmlFor="companyName">Company Name</label>
-              <input type='text' name='companyName' onChange={this.handleChange} noValidate />
+              <input id="company" type='text' name='companyName' onChange={this.handleChange} noValidate />
               {errors.companyName.length > 0 &&
                 <span className='error'>{errors.companyName}</span>}
             </div>
             <div className='email'>
               <label htmlFor="email">Email</label>
-              <input type='email' name='email' onChange={this.handleChange} noValidate />
+              <input id="email" type='email' name='email' onChange={this.handleChange} noValidate />
               {errors.email.length > 0 &&
                 <span className='error'>{errors.email}</span>}
             </div>
@@ -136,11 +136,12 @@ render() {
 
 
             <div>
-              <button type="submit" id="submit" className="submit" />
+              <button id="submit1" type="submit"  className="submit" ><Button id="submit"/></ button>
             {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
             </div>
-
-
+             <div>
+              <button type="reset" id="reset" className="reset" />
+            </div>
 
           </form>
     );
