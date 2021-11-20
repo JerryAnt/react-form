@@ -16,6 +16,7 @@ class Form extends Component {
       errorCount: null,
       errors: {
       fullName: '',
+      companyName: '',
       email: '',
       }
     };
@@ -31,6 +32,12 @@ class Form extends Component {
         errors.fullName =
           value.length < 5
             ? 'Full Name must be 5 characters long!'
+            : '';
+        break;
+        case 'companyName':
+        errors.companyName =
+          value.length < 5
+            ? 'Company Name must be 5 characters long!'
             : '';
         break;
       case 'email':
@@ -99,46 +106,46 @@ class Form extends Component {
     this.setState({errorCount: countErrors(this.state.errors)});
   }
 
-
-  render() {
+render() {
     const {errors, formValid} = this.state;
     return (
-      <form onSubmit={this.handleSubmit} noValidate>
 
+
+
+          <form onSubmit={this.handleSubmit} noValidate>
             <div className='fullName'>
               <label htmlFor="fullName">Full Name</label>
+              <input type='text' name='fullName' onChange={this.handleChange} noValidate />
+              {errors.fullName.length > 0 &&
+                <span className='error'>{errors.fullName}</span>}
+            </div>
+            <div className='companyName'>
+              <label htmlFor="companyName">Company Name</label>
+              <input type='text' name='companyName' onChange={this.handleChange} noValidate />
+              {errors.companyName.length > 0 &&
+                <span className='error'>{errors.companyName}</span>}
+            </div>
+            <div className='email'>
+              <label htmlFor="email">Email</label>
+              <input type='email' name='email' onChange={this.handleChange} noValidate />
+              {errors.email.length > 0 &&
+                <span className='error'>{errors.email}</span>}
+            </div>
 
-          <InputField
-          id="name" className="name" name="fullName" onChange={this.handleChange} noValidate
-          />
-          {errors.fullName.length > 0 && <span className='error'>{errors.fullName}</span>}
-        </div>
-        <div>
-          <p>company*</p>
-          <InputField  id="company"  />
-        </div>
-        <div>
-          <p>email*</p>
-          <InputField  id="email" />
-        </div>
-        <Checkbox />
-        <div className="container">
+            <Checkbox />
 
-          <Button type="submit"
-          id="submit" className="submit"
 
-        // create a function handleSubmit
-          // onClick= "handleSubmit"
-          />
-          {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
-          <Button id="reset"
+            <div>
+              <button type="submit" id="submit" className="submit" />
+            {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
+            </div>
 
-        // create a function handleclear
-          onclick="handleclear"/>
-        </div>
 
-      </form>
+
+          </form>
     );
   }
 }
+
 export default Form;
+
