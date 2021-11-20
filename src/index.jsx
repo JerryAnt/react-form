@@ -14,3 +14,5 @@ if (root) {
     <Form />,
     root);
 }
+
+render (<form />, document.getElementById('root'));
