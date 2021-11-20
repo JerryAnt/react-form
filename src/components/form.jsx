@@ -8,6 +8,7 @@ class Form extends Component {
     super(props);
     this.state = {
       // where I should put my events
+
     };
   }
 
@@ -18,17 +19,28 @@ handleSubmit() {
     // when I click on submit button
       // if input field is empty
       // show an error message
+      // error message "Please provide your name"
 
       // if email is empty
       // show an error message
+      // "Please provide an email"
 
       // if company is empty
         // show an error message
+        // "Please provide your company name"
 
       // if email is not valid
       // show an error message
+      // "Please provide a valid email"
 
-  // else submit button throws to a link
+      // if checkbox is not checked
+      // show an error message
+      // Please check the box
+
+  // else
+    // submit button throws to a link
+    // show a success message
+    // You have successfully subscribed to the newsletter
 
 }
 
