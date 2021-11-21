@@ -15,9 +15,9 @@ class Form extends Component {
       formValid: false,
       errorCount: null,
       errors: {
-      fullName: '',
-      companyName: '',
-      email: '',
+      fullName: ' ',
+      companyName: ' ',
+      email: ' ',
       }
     };
   }
@@ -124,13 +124,12 @@ render() {
               {errors.email.length > 0 &&
                 <span className='error'>{errors.email}</span>}
             </div>
-            <Checkbox />
-            <div>
+            < Checkbox />
+            <div class="container">
               <button id="submit1" type="submit"  className="submit" ><Button id="submit"/></ button>
             {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
-            </div>
-             <div>
-              <button type="reset" id="reset" className="reset" />
+
+              <button type="reset" id="reset1" className="reset"> <Button id="reset"/></ button>
             </div>
           </form>
     );

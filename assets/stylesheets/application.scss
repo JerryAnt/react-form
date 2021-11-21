@@ -50,16 +50,18 @@ background-color: grey;
   }
 }
 
-
+#reset1{
+    background-color: red;
   #reset{
     background-color: red;
-    padding: 8px;
+    padding: 0px;
+    margin: 0px;
     width: 100%;
-    height:50px;
+    height:100%;
     color:white;
     cursor:pointer;
   }
-
+}
 .container{
   display:flex;
   text-align: center;
