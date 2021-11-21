@@ -50,10 +50,6 @@ class Form extends Component {
 
     this.setState({errors, [name]: value});
   }
-
-
-
-
   // where I should change the state
   // handleSubmit for the submit button
 
@@ -102,20 +98,17 @@ class Form extends Component {
 // }
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({formValid: validateForm(this.state.errors)});
-    this.setState({errorCount: countErrors(this.state.errors)});
+    this.setState({ formValid: validateForm(this.state.errors) });
+    this.setState({ errorCount: countErrors(this.state.errors) });
   }
 
 render() {
-    const {errors, formValid} = this.state;
+    const { errors, formValid } = this.state;
     return (
-
-
-
-          <form onSubmit={this.handleSubmit} noValidate>
+          <form onSubmit={ this.handleSubmit } noValidate>
             <div className='fullName'>
               <label htmlFor="fullName">Full Name</label>
-              <InputField id="name" type='text' name='fullName' onChange={this.handleChange} noValidate />
+              <input id="name" type='text' name='fullName' onChange={this.handleChange} noValidate />
               {errors.fullName.length > 0 &&
                 <span className='error'>{errors.fullName}</span>}
             </div>
@@ -131,10 +124,7 @@ render() {
               {errors.email.length > 0 &&
                 <span className='error'>{errors.email}</span>}
             </div>
-
             <Checkbox />
-
-
             <div>
               <button id="submit1" type="submit"  className="submit" ><Button id="submit"/></ button>
             {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
@@ -142,11 +132,32 @@ render() {
              <div>
               <button type="reset" id="reset" className="reset" />
             </div>
-
           </form>
     );
   }
 }
 
 export default Form;
+
+
+// render() {
+//     const {errors, formValid} = this.state;
+//     return (
+
+//           <form onSubmit={this.handleSubmit} noValidate>
+
+//             <InputField />
+//             <Checkbox />
+//             <Buttons />
+
+//              <div>
+//               <button type="reset" id="reset" className="reset" />
+//             </div>
+
+//           </form>
+//     );
+//   }
+// }
+
+// export default Form;
 

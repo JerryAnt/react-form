@@ -10,3 +10,20 @@ class Button extends Component {
 }
 
 export default Button;
+
+
+// import React,  { Component } from 'react';
+// import ButtonSubmit from './button_submit.jsx';
+// // import ButtonReset from './button_reset.jsx';
+// class Buttons extends Component {
+//   render() {
+//     return (
+//       <div class="container">
+//         <ButtonSubmit />
+//         {/*<ButtonReset />*/}
+//       </div>
+//     );
+//   }
+// };
+
+// export default Buttons;
